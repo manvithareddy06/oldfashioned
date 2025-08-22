@@ -28,7 +28,8 @@ export default function Nav() {
   };
 
   const navItem = (label, target, index = 0, isMobile = false) => {
-    const baseClass = "text-sm font-medium cursor-pointer transition duration-300";
+    const baseClass =
+      "text-sm font-medium cursor-pointer transition duration-300 relative group";
     const hoverClass = "hover:text-cyan-400 hover:scale-105";
 
     if (isMobile) {
@@ -36,7 +37,7 @@ export default function Nav() {
         <span
           key={label}
           onClick={() => handleNavClick(target)}
-          className={`${baseClass} text-center text-slate-200 opacity-0 animate-fadeInUp`}
+          className={`${baseClass} text-slate-200 w-full text-center py-3 opacity-0 animate-fadeInUp`}
           style={{ animationDelay: `${index * 100}ms` }}
         >
           {label}
@@ -44,7 +45,6 @@ export default function Nav() {
       );
     }
 
-    // Desktop nav items with slide up + bounce animation & staggered delay
     return (
       <span
         key={label}
@@ -53,12 +53,13 @@ export default function Nav() {
         style={{ animationDelay: `${index * 100}ms` }}
       >
         {label}
+        <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
       </span>
     );
   };
 
   return (
-    <div className="fixed top-0 w-full z-50 bg-transparent border-b border-gray-700 shadow-md transition-colors duration-500">
+    <div className="fixed top-0 w-full z-50 backdrop-blur-md bg-black/40 border-b border-gray-700 shadow-lg transition-colors duration-500">
       <style>{`
         @keyframes slideUpBounce {
           0% {
@@ -89,9 +90,22 @@ export default function Nav() {
           transform: scale(1.1);
           transition: transform 0.3s ease;
         }
+        @keyframes fadeInUp {
+          0% {
+            opacity: 0;
+            transform: translateY(10px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        .animate-fadeInUp {
+          animation: fadeInUp 0.4s ease forwards;
+        }
       `}</style>
 
-      <div className="flex items-center justify-between px-4 py-2 md:px-10 md:h-20">
+      <div className="flex items-center justify-between px-4 py-2 md:px-10 md:h-16">
         {/* Logo */}
         <div
           className={`flex items-center transition-all duration-700 ease-out ${
@@ -102,7 +116,7 @@ export default function Nav() {
             <img
               src={logo}
               alt="Gnitc"
-              className="h-14 md:h-20 w-auto rounded-xl cursor-pointer transform transition-all duration-500 hover:scale-110 hover:rotate-1"
+              className="h-8 md:h-12 w-auto rounded-xl cursor-pointer transform transition-all duration-500 hover:scale-110 hover:rotate-1"
             />
           </span>
         </div>
@@ -111,38 +125,42 @@ export default function Nav() {
         <div className="hidden md:flex space-x-6 font-medium items-center">
           {navItem("About Us", "aboutus", 0)}
           {navItem("Societies", "societies", 1)}
-          {navItem("Events", "events", 2)}
+          {navItem("Explore Events", "events", 2)}
           <RouterLink
             to="/events"
-            className="cursor-pointer text-slate-200 hover:text-cyan-400 transition-all duration-300"
+            className="cursor-pointer text-slate-200 hover:text-cyan-400 transition-all duration-300 relative group"
           >
-            Explore Events
+            Register For Events
+            <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
           </RouterLink>
-          {navItem("Top Leadership", "TopLeadership", 3)}
+          {navItem("Top Leadership", "topleadership", 3)}
           {navItem("Faculty Advisors", "advisors", 4)}
           {navItem("Our Team", "team", 5)}
-          {navItem("Contact", "contact", 6)}
+          {navItem("Contact Us", "contact", 6)}
           <RouterLink
             to="/PreviousTeam"
-            className="cursor-pointer text-slate-200 hover:text-cyan-400 transition-all duration-300"
+            className="cursor-pointer text-slate-200 hover:text-cyan-400 transition-all duration-300 relative group"
           >
             Previous Team
+            <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
           </RouterLink>
           <a
             href="https://hackarena.ieeegnitc.org/"
             target="_blank"
             rel="noopener noreferrer"
-            className="cursor-pointer text-slate-200 hover:text-cyan-400 transition-all duration-300"
+            className="cursor-pointer text-slate-200 hover:text-cyan-400 transition-all duration-300 relative group"
           >
             HackArena
+            <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
           </a>
           <a
             href="https://www.ieee.org/"
             target="_blank"
             rel="noopener noreferrer"
-            className="cursor-pointer text-slate-200 hover:text-cyan-400 transition-all duration-300"
+            className="cursor-pointer text-slate-200 hover:text-cyan-400 transition-all duration-300 relative group"
           >
             IEEE.org
+            <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
           </a>
         </div>
 
@@ -154,7 +172,7 @@ export default function Nav() {
         </div>
       </div>
 
-      {/* Mobile Menu with Background Overlay */}
+      {/* Mobile Menu Overlay */}
       {isOpen && (
         <div
           className="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm transition-opacity duration-500"
@@ -162,55 +180,58 @@ export default function Nav() {
         />
       )}
 
+      {/* Mobile Dropdown */}
       <div
-        className={`md:hidden fixed top-[70px] left-1/2 -translate-x-1/2 w-[90%] rounded-xl overflow-hidden transform transition-all duration-500 z-50 shadow-lg ${
+        className={`md:hidden fixed top-[64px] left-0 w-full transform transition-all duration-500 z-50 shadow-lg ${
           isOpen
-            ? "opacity-100 scale-100 translate-y-0"
-            : "opacity-0 scale-95 -translate-y-5 pointer-events-none"
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 -translate-y-5 pointer-events-none"
         }`}
-        style={{
-          background:
-            "linear-gradient(135deg, rgba(30,41,59,0.95), rgba(15,23,42,0.95))",
-        }}
+        style={{ background: "black" }}
       >
-        <div className="relative flex flex-col items-center text-slate-200 text-sm font-medium py-4 space-y-4">
+        <div className="relative flex flex-col items-center text-slate-200 text-sm font-medium py-4 space-y-2">
           {navItem("About Us", "aboutus", 0, true)}
           {navItem("Societies", "societies", 1, true)}
-          {navItem("Events", "events", 2, true)}
+          {navItem("Explore Events", "events", 2, true)}
+
           <RouterLink
             to="/events"
             onClick={closeMenu}
-            className="text-center text-sm font-medium hover:text-cyan-400 transition duration-300 opacity-0 animate-fadeInUp"
+            className="w-full text-center py-3 text-sm font-medium hover:text-cyan-400 transition duration-300 opacity-0 animate-fadeInUp"
             style={{ animationDelay: `350ms` }}
           >
-            Explore Events
+            Register For Events
           </RouterLink>
+
           {navItem("Top Leadership", "topleadership", 3, true)}
           {navItem("Faculty Advisors", "advisors", 4, true)}
           {navItem("Our Team", "team", 5, true)}
-          {navItem("Contact", "contact", 6, true)}
+          {navItem("Contact Us", "contact", 6, true)}
+
           <RouterLink
             to="/PreviousTeam"
             onClick={closeMenu}
-            className="text-center text-sm font-medium hover:text-cyan-400 transition duration-300 opacity-0 animate-fadeInUp"
+            className="w-full text-center py-3 text-sm font-medium hover:text-cyan-400 transition duration-300 opacity-0 animate-fadeInUp"
             style={{ animationDelay: `700ms` }}
           >
             Previous Team
           </RouterLink>
+
           <a
             href="https://hackarena.ieeegnitc.org/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-center text-sm font-medium hover:text-cyan-400 transition duration-300 opacity-0 animate-fadeInUp"
+            className="w-full text-center py-3 text-sm font-medium hover:text-cyan-400 transition duration-300 opacity-0 animate-fadeInUp"
             style={{ animationDelay: `800ms` }}
           >
             HackArena
           </a>
+
           <a
             href="https://www.ieee.org/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-center text-sm font-medium hover:text-cyan-400 transition duration-300 opacity-0 animate-fadeInUp"
+            className="w-full text-center py-3 text-sm font-medium hover:text-cyan-400 transition duration-300 opacity-0 animate-fadeInUp"
             style={{ animationDelay: `900ms` }}
           >
             IEEE.org
