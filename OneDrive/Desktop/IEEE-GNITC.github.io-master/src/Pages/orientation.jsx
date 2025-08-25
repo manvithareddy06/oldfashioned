@@ -27,11 +27,13 @@ export default function Orientation() {
   return (
     <div className="min-h-screen pt-28 pb-20 px-4 md:px-10 bg-black text-white flex flex-col items-center">
       {/* Header */}
-      <div className="text-center mb-12 max-w-3xl px-2 sm:px-0 animate-fadeIn">
-        <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-400 animate-gradient">
+      <div className="mb-12 max-w-3xl w-full animate-fadeIn">
+        <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-400 animate-gradient text-left sm:text-center">
           Orientation Day – IEEE GNI
         </h1>
-        <p className="text-gray-300 mt-6 text-base sm:text-lg leading-relaxed sm:leading-loose">
+
+        {/* Text - Always Left */}
+        <p className="text-gray-300 mt-6 text-base sm:text-lg leading-relaxed sm:leading-loose text-left">
           The IEEE GNI Orientation Day is a welcoming event for all new students
           interested in technology, innovation, and professional growth. It's
           designed to introduce the vision, mission, and opportunities offered
@@ -42,7 +44,8 @@ export default function Orientation() {
           or leadership – Orientation Day is your first step into the world of
           IEEE at GNI!
         </p>
-        <p className="mt-4 text-sm text-pink-400 font-semibold uppercase tracking-wider">
+
+        <p className="mt-4 text-sm text-pink-400 font-semibold uppercase tracking-wider text-left">
           Discover. Connect. Grow.
         </p>
       </div>
@@ -85,14 +88,20 @@ export default function Orientation() {
       </div>
 
       {/* Event Info */}
-      <div className="space-y-4 text-gray-300 text-center animate-fadeInUp">
-        <div className="flex justify-center items-center gap-3">
-          <CalendarDays size={20} className="text-pink-500" />
-          <span>26-JULY-2025</span>
-        </div>
-        <div className="flex justify-center items-center gap-3">
-          <MapPin size={20} className="text-purple-400" />
-          <span>GNI Campus, Hyderabad</span>
+      <div className="space-y-4 text-gray-300 w-full animate-fadeInUp">
+        <div className="flex flex-col sm:flex-row justify-center sm:justify-center items-start sm:items-center gap-2 sm:gap-6 text-left sm:text-center">
+          <div className="flex items-center gap-2 sm:gap-3">
+            <CalendarDays size={20} className="text-pink-500" />
+            <span className="text-sm sm:text-base font-medium">
+              26-JULY-2025
+            </span>
+          </div>
+          <div className="flex items-center gap-2 sm:gap-3">
+            <MapPin size={20} className="text-purple-400" />
+            <span className="text-sm sm:text-base font-medium">
+              GNI Campus, Hyderabad
+            </span>
+          </div>
         </div>
       </div>
 

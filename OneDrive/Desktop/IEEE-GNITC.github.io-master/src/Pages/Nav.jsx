@@ -113,10 +113,10 @@ export default function Nav() {
         }
       `}</style>
 
-      <div className="flex items-center justify-between px-4 py-2 md:px-10 md:h-16">
+      <div className="flex items-center justify-between px-4 py-2 md:px-8 md:h-14">
         {/* Logo */}
         <div
-          className={`flex items-center transition-all duration-700 ease-out ${
+          className={`flex items-center mr-auto transition-all duration-700 ease-out ${
             logoVisible ? "opacity-100 scale-100" : "opacity-0 scale-75"
           }`}
         >
@@ -124,13 +124,13 @@ export default function Nav() {
             <img
               src={logo}
               alt="Gnitc"
-              className="h-8 md:h-12 w-auto rounded-xl cursor-pointer transform transition-all duration-500 hover:scale-110 hover:rotate-1"
+              className="h-7 md:h-10 w-auto rounded-xl cursor-pointer transform transition-all duration-500 hover:scale-110 hover:rotate-1"
             />
           </span>
         </div>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex overflow-x-auto hide-scrollbar gap-x-6 lg:gap-x-8 items-center font-medium whitespace-nowrap">
+        <div className="hidden md:flex overflow-x-auto hide-scrollbar gap-x-5 lg:gap-x-6 items-center font-medium whitespace-nowrap ml-auto">
           {navItem("About Us", "aboutus", 0)}
           {navItem("Societies", "societies", 1)}
           {navItem("Explore Events", "events", 2)}
@@ -195,7 +195,7 @@ export default function Nav() {
 
       {/* Mobile Dropdown */}
       <div
-        className={`md:hidden fixed top-[64px] left-0 w-full transform transition-all duration-500 z-50 shadow-lg ${
+        className={`md:hidden fixed top-[56px] left-0 w-full transform transition-all duration-500 z-50 shadow-lg ${
           isOpen
             ? "opacity-100 translate-y-0"
             : "opacity-0 -translate-y-5 pointer-events-none"
@@ -213,7 +213,7 @@ export default function Nav() {
             className="w-full text-center py-3 text-sm font-medium hover:text-cyan-400 transition duration-300 opacity-0 animate-fadeInUp"
             style={{ animationDelay: `350ms` }}
           >
-            Register For Events
+            Checkout Events!
           </RouterLink>
 
           {navItem("Top Leadership", "topleadership", 3, true)}

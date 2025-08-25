@@ -14,7 +14,7 @@ const futureEvents = [
       "Join us for Tech-Ignition 2.0 – a day packed with innovation, skill, and creativity! Compete in UI/UX Design, Code Debugging, Tech-Treasure Hunt, Debate, E-Sports (BGMI & Free Fire), and The Content Creator’s Challenge. Free entry for IEEE members!",
     tag: "Tech & Fun",
     img: techImg,
-    registrationLink: "https://konfhub.com/tech-ignition-20-c7a586ae",
+    registrationLink: null,
     detailsPage: "/tech",
   },
   {

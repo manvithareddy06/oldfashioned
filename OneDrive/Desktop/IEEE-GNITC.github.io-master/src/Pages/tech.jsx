@@ -1,6 +1,6 @@
 // src/Pages/events/main/TechIgnition.jsx
 import React, { useState } from "react";
-import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 import img1 from "../assets/techignition/1.jpg";
@@ -24,9 +24,12 @@ export default function TechIgnition() {
 
   return (
     <div className="min-h-screen pt-28 pb-20 px-4 md:px-8 bg-black text-white">
-      {/* Tech-Ignition 1.0 Heading */}
+      {/* Tech-Ignition 1.0 Heading (Left on mobile, Center on desktop) */}
       <motion.h2
-        className="text-center text-3xl sm:text-4xl md:text-5xl font-extrabold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 drop-shadow-lg"
+        className="text-left md:text-center text-3xl sm:text-4xl md:text-5xl font-extrabold mb-8 
+                   bg-clip-text text-transparent 
+                   bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 
+                   drop-shadow-lg"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -82,10 +85,20 @@ export default function TechIgnition() {
       </div>
 
       {/* About Section */}
-      <div className="mt-12 sm:mt-16 max-w-3xl mx-auto text-center px-4 sm:px-6 space-y-6">
+      <div
+        className="
+          mt-12 sm:mt-16 
+          max-w-4xl 
+          ml-0 sm:ml-auto sm:mr-auto 
+          px-4 sm:px-6 
+          space-y-6 
+          text-left
+        "
+      >
         {/* Title */}
         <motion.h1
-          className="text-3xl sm:text-4xl md:text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-400 animate-gradient"
+          className="text-3xl sm:text-4xl md:text-5xl font-extrabold bg-clip-text text-transparent 
+                     bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-400 animate-gradient text-left"
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
@@ -93,23 +106,24 @@ export default function TechIgnition() {
           TECH-IGNITION 2.0
         </motion.h1>
 
-        {/* Announcement */}
+        {/* Announcement (Subheading) */}
         <motion.p
-          className="text-lg sm:text-xl md:text-2xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-400"
+          className="text-lg sm:text-xl md:text-2xl font-semibold bg-clip-text text-transparent 
+                     bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-400 text-left"
           animate={{ y: [0, -5, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
         >
-          Countdown Begins – 23rd August 2025 🚀
+          Countdown Begins – 23rd August 2025
         </motion.p>
 
         {/* Description */}
         <motion.p
-          className="text-gray-300 leading-relaxed text-base sm:text-lg md:text-xl tracking-wide"
+          className="text-gray-300 leading-relaxed text-base sm:text-lg md:text-xl tracking-wide text-left"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.8 }}
         >
-          Tech-Ignition 2.0 is back — bigger, better, and more thrilling! 🚀  
+          Tech-Ignition 2.0 is back — bigger, better, and more thrilling! 
           Get ready for a day filled with innovation, skill, and creativity.  
           Compete in exciting events like{" "}
           <span className="text-cyan-400 font-medium">UI/UX Design</span>,{" "}
@@ -122,22 +136,6 @@ export default function TechIgnition() {
           Tech-Ignition 2.0 promises an unforgettable experience for all.
         </motion.p>
       </div>
-
-      {/* Register Now Button */}
-      <div className="max-w-md mx-auto mt-16 px-6">
-        <a
-          href="https://konfhub.com/tech-ignition-20-c7a586ae"  // Replace with your actual registration link
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-full inline-flex justify-center items-center gap-2 px-10 py-4 bg-gradient-to-r from-pink-600 via-purple-600 to-cyan-600 text-white font-extrabold rounded-full text-lg hover:scale-105 transition transform shadow-[0_0_15px_rgba(219,39,119,0.8)] hover:shadow-[0_0_25px_rgba(58,99,212,0.9)]"
-          style={{
-            boxShadow:
-              "0 0 20px rgba(219,39,119,0.8), 0 0 30px rgba(58,99,212,0.9)",
-          }}
-        >
-          Register Now <ArrowRight size={24} />
-        </a>
-      </div>
     </div>
-  );   
+  );
 }
