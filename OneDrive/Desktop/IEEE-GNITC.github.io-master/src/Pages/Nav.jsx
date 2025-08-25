@@ -49,7 +49,7 @@ export default function Nav() {
       <span
         key={label}
         onClick={() => handleNavClick(target)}
-        className={`${baseClass} text-slate-200 nav-desktop-item ${hoverClass}`}
+        className={`${baseClass} text-slate-200 nav-desktop-item ${hoverClass} whitespace-nowrap`}
         style={{ animationDelay: `${index * 100}ms` }}
       >
         {label}
@@ -103,6 +103,14 @@ export default function Nav() {
         .animate-fadeInUp {
           animation: fadeInUp 0.4s ease forwards;
         }
+        /* Hide scrollbar for horizontal scroll */
+        .hide-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+        .hide-scrollbar {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
       `}</style>
 
       <div className="flex items-center justify-between px-4 py-2 md:px-10 md:h-16">
@@ -122,16 +130,16 @@ export default function Nav() {
         </div>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex flex-wrap gap-x-6 lg:gap-x-8 items-center font-medium">
+        <div className="hidden md:flex overflow-x-auto hide-scrollbar gap-x-6 lg:gap-x-8 items-center font-medium whitespace-nowrap">
           {navItem("About Us", "aboutus", 0)}
           {navItem("Societies", "societies", 1)}
           {navItem("Explore Events", "events", 2)}
 
           <RouterLink
             to="/events"
-            className="cursor-pointer text-slate-200 hover:text-cyan-400 transition-all duration-300 relative group"
+            className="cursor-pointer text-slate-200 hover:text-cyan-400 transition-all duration-300 relative group whitespace-nowrap"
           >
-            Register For Events
+            Checkout Events!
             <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
           </RouterLink>
 
@@ -142,7 +150,7 @@ export default function Nav() {
 
           <RouterLink
             to="/PreviousTeam"
-            className="cursor-pointer text-slate-200 hover:text-cyan-400 transition-all duration-300 relative group"
+            className="cursor-pointer text-slate-200 hover:text-cyan-400 transition-all duration-300 relative group whitespace-nowrap"
           >
             Previous Team
             <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
@@ -152,7 +160,7 @@ export default function Nav() {
             href="https://hackarena.ieeegnitc.org/"
             target="_blank"
             rel="noopener noreferrer"
-            className="cursor-pointer text-slate-200 hover:text-cyan-400 transition-all duration-300 relative group"
+            className="cursor-pointer text-slate-200 hover:text-cyan-400 transition-all duration-300 relative group whitespace-nowrap"
           >
             HackArena
             <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
@@ -162,7 +170,7 @@ export default function Nav() {
             href="https://www.ieee.org/"
             target="_blank"
             rel="noopener noreferrer"
-            className="cursor-pointer text-slate-200 hover:text-cyan-400 transition-all duration-300 relative group"
+            className="cursor-pointer text-slate-200 hover:text-cyan-400 transition-all duration-300 relative group whitespace-nowrap"
           >
             IEEE.org
             <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
