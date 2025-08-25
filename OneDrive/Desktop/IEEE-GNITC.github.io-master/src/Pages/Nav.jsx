@@ -139,7 +139,7 @@ export default function Nav() {
             to="/events"
             className="cursor-pointer text-slate-200 hover:text-cyan-400 transition-all duration-300 relative group whitespace-nowrap"
           >
-            Checkout Events!
+            Happening Now!
             <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
           </RouterLink>
 
@@ -213,7 +213,7 @@ export default function Nav() {
             className="w-full text-center py-3 text-sm font-medium hover:text-cyan-400 transition duration-300 opacity-0 animate-fadeInUp"
             style={{ animationDelay: `350ms` }}
           >
-            Checkout Events!
+            Happening Now!
           </RouterLink>
 
           {navItem("Top Leadership", "topleadership", 3, true)}

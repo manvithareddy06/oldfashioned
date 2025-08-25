@@ -95,16 +95,21 @@ export default function TechIgnition() {
           text-left
         "
       >
-        {/* Title */}
-        <motion.h1
-          className="text-3xl sm:text-4xl md:text-5xl font-extrabold bg-clip-text text-transparent 
-                     bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-400 animate-gradient text-left"
-          initial={{ y: 30, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8 }}
-        >
-          TECH-IGNITION 2.0
-        </motion.h1>
+{/* Title */}
+<motion.h1
+  className="text-left md:text-center 
+             text-3xl sm:text-4xl md:text-5xl font-extrabold 
+             bg-clip-text text-transparent 
+             bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-400 
+             animate-gradient"
+  initial={{ y: 30, opacity: 0 }}
+  animate={{ y: 0, opacity: 1 }}
+  transition={{ duration: 0.8 }}
+>
+  TECH-IGNITION 2.0
+</motion.h1>
+
+
 
         {/* Announcement (Subheading) */}
         <motion.p
@@ -113,7 +118,7 @@ export default function TechIgnition() {
           animate={{ y: [0, -5, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
         >
-          Countdown Begins – 23rd August 2025
+
         </motion.p>
 
         {/* Description */}
