@@ -122,10 +122,11 @@ export default function Nav() {
         </div>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex space-x-6 font-medium items-center">
+        <div className="hidden md:flex flex-wrap gap-x-6 lg:gap-x-8 items-center font-medium">
           {navItem("About Us", "aboutus", 0)}
           {navItem("Societies", "societies", 1)}
           {navItem("Explore Events", "events", 2)}
+
           <RouterLink
             to="/events"
             className="cursor-pointer text-slate-200 hover:text-cyan-400 transition-all duration-300 relative group"
@@ -133,10 +134,12 @@ export default function Nav() {
             Register For Events
             <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
           </RouterLink>
+
           {navItem("Top Leadership", "topleadership", 3)}
           {navItem("Faculty Advisors", "advisors", 4)}
           {navItem("Our Team", "team", 5)}
           {navItem("Contact Us", "contact", 6)}
+
           <RouterLink
             to="/PreviousTeam"
             className="cursor-pointer text-slate-200 hover:text-cyan-400 transition-all duration-300 relative group"
@@ -144,6 +147,7 @@ export default function Nav() {
             Previous Team
             <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
           </RouterLink>
+
           <a
             href="https://hackarena.ieeegnitc.org/"
             target="_blank"
@@ -153,6 +157,7 @@ export default function Nav() {
             HackArena
             <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
           </a>
+
           <a
             href="https://www.ieee.org/"
             target="_blank"
