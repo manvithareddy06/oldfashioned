@@ -11,15 +11,15 @@ import img5 from "../assets/techignition/5.jpg";
 import img8 from "../assets/techignition/ieee3.jpg";
 import img9 from "../assets/techignition/ieee4.jpg";
 import img10 from "../assets/techignition/ieee5.jpg";
-import img11 from "../assets/techignition/ti1.jpg";
+
 import img12 from "../assets/techignition/ti2.jpg";
-import img13 from "../assets/techignition/ti3.jpg";
+
 import img14 from "../assets/techignition/ti4.jpg";
-import img15 from "../assets/techignition/ti5.jpg";
+
 import img16 from "../assets/techignition/ti6.jpg";
-import img17 from "../assets/techignition/ti7.jpg";
+
 import img18 from "../assets/techignition/ti8.jpg";
-import img19 from "../assets/techignition/ti9.jpg";
+
 
 const images1 = [img1, img2, img3, img4, img5];
 const images2 = [img8, img9, img10, img12, img14, img16, img18];
