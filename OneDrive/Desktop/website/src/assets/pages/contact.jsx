@@ -1,6 +1,6 @@
 // src/components/Footer.jsx
 import React from "react";
-import { Link } from "react-router-dom";   // Import Link
+import { Link } from "react-router-dom"; 
 import logo from "../pictures/x.png";
 import { Instagram, Facebook, Linkedin } from "lucide-react";
 
@@ -31,7 +31,15 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto hidden md:flex justify-between items-start gap-12">
         {/* Left: Logo & Description */}
         <div className="w-full md:max-w-sm space-y-4">
-          <img src={logo} alt="Xytrix Logo" className="w-28 md:w-36" />
+          <div className="relative inline-block">
+            <img
+              src={logo}
+              alt="Xytrix Logo"
+              className="w-28 md:w-36 relative z-10 drop-shadow-[0_0_15px_rgba(56,189,248,0.7)]"
+            />
+            {/* Soft glow animation */}
+            <div className="absolute inset-0 bg-cyan-500/20 blur-3xl rounded-full animate-pulse"></div>
+          </div>
           <p className="text-sm text-gray-400 leading-relaxed">
             - Where Creativity Meets Technology 
           </p>
@@ -92,15 +100,22 @@ export default function Footer() {
       {/* Mobile Layout */}
       <div className="md:hidden flex flex-col gap-12">
         {/* Logo & Description */}
-        <div className="text-center space-y-4">
-          <img src={logo} alt="Xytrix Logo" className="w-24 mx-auto" />
-          <p className="text-sm text-gray-400 leading-relaxed max-w-md mx-auto">
+        <div className="text-left space-y-4">
+          <div className="relative inline-block">
+            <img
+              src={logo}
+              alt="Xytrix Logo"
+              className="w-24 relative z-10 drop-shadow-[0_0_12px_rgba(236,72,153,0.6)]"
+            />
+            <div className="absolute inset-0 bg-purple-500/20 blur-2xl rounded-full animate-pulse"></div>
+          </div>
+          <p className="text-sm text-gray-400 leading-relaxed max-w-md">
             Xytrix - Where Creativity Meets Technology
           </p>
         </div>
 
         {/* Services + Company */}
-        <div className="grid grid-cols-2 gap-8 text-center">
+        <div className="grid grid-cols-2 gap-8 text-left">
           {/* Services */}
           <div>
             <h4 className="text-white font-semibold text-base mb-4">Services</h4>
@@ -135,8 +150,8 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Resources Centered */}
-        <div className="text-center">
+        {/* Resources Left Aligned */}
+        <div className="text-left">
           <h4 className="text-white font-semibold text-base mb-4">Resources</h4>
           <ul className="space-y-2 text-sm text-gray-400">
             {resources.map((item, idx) => (
@@ -151,8 +166,8 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Social Media Icons (bottom right on desktop, centered on mobile) */}
-      <div className="mt-10 flex justify-center md:justify-end gap-6">
+      {/* Social Media Icons (bottom right on desktop, left on mobile) */}
+      <div className="mt-10 flex justify-start md:justify-end gap-6">
         <a
           href="https://www.instagram.com/code.musee/"
           target="_blank"
