@@ -14,7 +14,7 @@ export default function Navbar() {
     { name: "Services", href: "services", type: "scroll" },
     { name: "Contact", href: "contact", type: "scroll" },
     { name: "About", href: "/about", type: "route" },
-  ];      
+  ];
 
   const handleNavigation = (href, type) => {
     setIsOpen(false);
@@ -43,7 +43,7 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-black/90 text-white shadow-md z-50">
-      <div className="container mx-auto px-6 md:px-12 flex items-center justify-between h-20">
+      <div className="container mx-auto px-6 md:px-12 flex items-center justify-between h-16">
         {/* Logo + Brand Name */}
         <button
           onClick={handleLogoClick}
@@ -51,19 +51,19 @@ export default function Navbar() {
           aria-label="Go to Home"
           type="button"
         >
-          <img src={logo} alt="Logo" className="h-14 w-auto object-contain" />
-          <span className="text-2xl font-bold text-white tracking-wide mb-2">
+          <img src={logo} alt="Logo" className="h-10 w-auto object-contain" />
+          <span className="text-xl font-bold text-white tracking-wide mb-1.5">
             YTRIX
           </span>
         </button>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-8 items-center">
+        <div className="hidden md:flex space-x-6 items-center">
           {navLinks.map((link) => (
             <button
               key={link.name}
               onClick={() => handleNavigation(link.href, link.type)}
-              className="text-gray-300 hover:text-teal-400 transition-colors duration-300"
+              className="text-gray-300 hover:text-teal-400 transition-colors duration-300 text-sm"
               type="button"
             >
               {link.name}
@@ -79,9 +79,9 @@ export default function Navbar() {
             type="button"
           >
             {isOpen ? (
-              <X className="w-7 h-7 text-teal-400" />
+              <X className="w-6 h-6 text-teal-400" />
             ) : (
-              <Menu className="w-7 h-7 text-teal-400" />
+              <Menu className="w-6 h-6 text-teal-400" />
             )}
           </button>
         </div>
@@ -90,15 +90,15 @@ export default function Navbar() {
       {/* Mobile Dropdown */}
       <div
         className={`md:hidden bg-black/95 border-t border-gray-700 transition-all duration-300 overflow-hidden ${
-          isOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"
+          isOpen ? "max-h-48 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="flex flex-col space-y-4 px-6 py-4">
+        <div className="flex flex-col space-y-3 px-6 py-3">
           {navLinks.map((link) => (
             <button
               key={link.name}
               onClick={() => handleNavigation(link.href, link.type)}
-              className="text-left text-gray-300 hover:text-teal-400 transition-colors duration-300"
+              className="text-left text-gray-300 hover:text-teal-400 transition-colors duration-300 text-sm"
               type="button"
             >
               {link.name}
