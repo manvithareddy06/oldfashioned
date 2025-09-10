@@ -1,167 +1,174 @@
 import React from "react";
-import { CalendarDays, MapPin, ArrowRight, Info, XCircle, Sparkles } from "lucide-react";
-import techImg from "../assets/tech.jpg";
+import { CalendarDays, MapPin, XCircle, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
+import techImg from "../assets/tech.jpg";
 import orientation from "../assets/orientation.jpg";
+import cm from "../assets/coming soon.jpg";
 
-const futureEvents = [
+const upcomingEvents = [
   {
     id: 1,
+    title: "HACK FORGE - NATIONAL LEVEL HACKATHON",
+    date: "24 October 2025",
+    location: "Guru Nanak Institutions",
+    description:
+      "HackForge is a national-level hackathon that brings together the brightest minds from across the country to innovate, create, and collaborate. This is not just a coding competition—it’s a celebration of ideas, technology, and problem-solving. Participants are challenged to think outside the box, build impactful solutions, and showcase their creativity under a limited time frame. ",
+    img: cm,  
+    registrationLink: null,
+    detailsPage: "",
+  },
+  {
+    id: 2,
+    title: "ENGINEER'S DAY",
+    date: "13 September 2025",
+    location: "Guru Gobind Singh Auditorium - GNI",
+    description:
+      "Join us for ENGINEER'S DAY – a day packed with innovation, skill, and creativity!",
+    img: cm,
+    registrationLink: null,
+    detailsPage: "",
+  },
+];
+
+const previousEvents = [
+  {
+    id: 3,
     title: "TECH-IGNITION 2.0",
     date: "23 August 2025",
     location: "Guru Gobind Singh Auditorium - GNI",
     description:
       "Join us for Tech-Ignition 2.0 – a day packed with innovation, skill, and creativity! Compete in UI/UX Design, Code Debugging, Tech-Treasure Hunt, Debate, E-Sports (BGMI & Free Fire), and The Content Creator’s Challenge. Free entry for IEEE members!",
-    tag: "Tech & Fun",
     img: techImg,
     registrationLink: null,
     detailsPage: "/tech",
   },
   {
-    id: 2,
+    id: 4,
     title: "IEEE ORIENTATION DAY",
     date: "26 July 2025",
-    location: "Ratan Naval Tata AUDITORIUM - GNI",
+    location: "Ratan Naval Tata Auditorium - GNI",
     description:
-      "The IEEE GNI Orientation Day is a welcoming event for new students, offering an introduction to the IEEE Student Branch’s vision, mission, and opportunities. It’s a chance to meet the team, discover upcoming events, and explore various technical domains!",
-    tag: "Kickstart Your IEEE Journey",
+      "The IEEE GNI Orientation Day welcomed new students, offering an introduction to the IEEE Student Branch’s vision, mission, and opportunities. Students explored technical domains and met the team.",
     img: orientation,
-    registrationLink: null, // ❌ Registration Closed
+    registrationLink: null,
     detailsPage: "/orientation",
   },
 ];
 
-export default function Events() {
+function EventCard({ event, index }) {
   return (
-    <div className="relative min-h-screen px-4 md:px-8 pt-28 pb-20 bg-black text-white flex flex-col">
-      {/* Header */}
-      <div className="mb-12 animate-fadeIn max-w-4xl mx-auto text-center md:text-left">
-        <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-400 animate-gradient">
-          Upcoming IEEE Events
-        </h1>
-        <p className="text-gray-300 mt-4 max-w-2xl mx-auto md:mx-0 text-sm md:text-lg leading-relaxed">
-          Stay tuned for our exciting lineup of tech events. Mark your calendars
-          and be part of the innovation!
-        </p>
+    <div
+      className="group relative bg-gray-900 rounded-xl overflow-hidden shadow-lg border border-gray-700 hover:border-gradient transform transition-all duration-500 cursor-pointer hover:scale-[1.03] hover:shadow-2xl animate-fadeUp h-full flex flex-col"
+      style={{ animationDelay: `${index * 0.2}s` }}
+    >
+      {/* Image */}
+      <div className="relative w-full overflow-hidden rounded-t-xl h-60 sm:h-64 md:h-72 lg:h-64 xl:h-72">
+        <img
+          src={event.img}
+          alt={event.title}
+          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+        />
+        <div className="absolute inset-0 bg-black/50"></div>
       </div>
 
-      {/* Events List */}
-      <div
-        className={`grid gap-10 ${
-          futureEvents.length === 1
-            ? "grid-cols-1"
-            : "sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
-        }`}
-      >
-        {futureEvents.map((event, index) => (
-          <div
-            key={event.id}
-            className="group relative rounded-2xl overflow-hidden bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 border border-zinc-700/40 hover:border-pink-500 shadow-md hover:shadow-[0_0_25px_#a855f7] transition-all duration-500 hover:scale-[1.04] hover:-rotate-1 animate-fadeInUp"
-            style={{ animationDelay: `${index * 0.2}s` }}
-          >
-            {/* Image */}
-            <div className="relative h-48 sm:h-56 overflow-hidden rounded-t-2xl">
-              <img
-                src={event.img}
-                alt={event.title}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-
-              {/* Tag */}
-              <span className="absolute top-3 left-3 bg-gradient-to-r from-purple-500 to-cyan-500 text-white text-[11px] font-semibold px-3 py-1 rounded-full shadow-md">
-                {event.tag}
-              </span>
+      {/* Content */}
+      <div className="p-5 flex flex-col justify-between bg-black/70 backdrop-blur-sm flex-grow">
+        <div>
+          <h3 className="text-xl md:text-2xl font-bold mb-3 group-hover:text-gradientPinkPurple transition-all duration-500">
+            {event.title}
+          </h3>
+          <p className="text-gray-300 text-sm mb-3 break-words">{event.description}</p>
+          <div className="flex flex-col gap-1 text-gray-400 text-sm">
+            <div className="flex items-center gap-2">
+              <CalendarDays size={16} className="text-pink-400" />
+              {event.date}
             </div>
-
-            {/* Content */}
-            <div className="px-5 py-6 bg-black/70 backdrop-blur-md flex flex-col justify-between">
-              <h3 className="text-xl md:text-2xl font-bold mb-2 group-hover:text-gradientPinkPurple">
-                {event.title}
-              </h3>
-              <p className="text-gray-300 text-sm leading-relaxed mb-5 line-clamp-3 md:line-clamp-none">
-                {event.description}
-              </p>
-
-              {/* Date & Location */}
-              <div className="space-y-2 text-sm mb-5">
-                <div className="flex items-center gap-2 text-gray-400">
-                  <CalendarDays size={16} className="text-pink-400" />
-                  <span>{event.date}</span>
-                </div>
-                <div className="flex items-center gap-2 text-gray-400">
-                  <MapPin size={16} className="text-purple-500" />
-                  <span>{event.location}</span>
-                </div>
-              </div>
-
-              {/* Buttons */}
-              {event.registrationLink ? (
-                <a
-                  href={event.registrationLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 w-full py-2.5 px-5 bg-gradient-to-r from-pink-600 via-purple-700 to-cyan-600 rounded-full font-bold text-white text-sm shadow-[0_0_10px_rgba(219,39,119,0.6)] hover:shadow-[0_0_18px_rgba(139,92,246,0.9)] transition-shadow duration-500 animate-glowPulse"
-                >
-                  Register Now <ArrowRight size={18} />
-                </a>
-              ) : (
-                <div className="flex items-center justify-center gap-2 w-full py-2.5 px-5 bg-gradient-to-r from-gray-600 to-gray-700 rounded-full font-semibold text-gray-300 text-sm shadow-inner">
-                  <XCircle size={18} className="text-red-400" />
-                  Registration Closed
-                </div>
-              )}
-
-              {/* Explore Button */}
-              <Link
-                to={event.detailsPage}
-                className="relative flex items-center justify-center gap-2 w-full py-2.5 px-5 mt-3 rounded-full font-medium text-sm text-white overflow-hidden group border border-transparent bg-gradient-to-r from-gray-700 to-gray-600 hover:from-transparent hover:to-transparent hover:border-pink-500 transition-all duration-500"
-              >
-                <span className="absolute inset-0 bg-gradient-to-r from-pink-500 via-purple-600 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-md"></span>
-                <span className="relative z-10 flex items-center gap-2 group-hover:scale-105 group-hover:rotate-1 transition-transform duration-500">
-                  Explore Event <Sparkles size={18} className="text-yellow-300" />
-                </span>
-              </Link>
+            <div className="flex items-center gap-2">
+              <MapPin size={16} className="text-purple-400" />
+              {event.location}
             </div>
           </div>
-        ))}
+        </div>
+
+        <div className="mt-4 flex flex-col gap-2">
+          {event.registrationLink ? (
+            <a
+              href={event.registrationLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full py-2 px-4 bg-gradient-to-r from-pink-600 via-purple-700 to-cyan-600 rounded-md text-white font-medium text-sm text-center shadow-lg hover:shadow-xl transition-all duration-500"
+            >
+              Register Now
+            </a>
+          ) : (
+            <div className="w-full py-2 px-4 bg-gray-700 rounded-md text-gray-300 font-medium text-sm text-center flex items-center justify-center gap-2">
+              <XCircle size={16} /> Registration Closed
+            </div>
+          )}
+
+          {event.detailsPage && (
+            <Link
+              to={event.detailsPage}
+              className="w-full py-2 px-4 border border-gray-600 rounded-md text-gray-200 text-sm text-center hover:bg-gray-800 transition-all duration-500 flex justify-center items-center gap-1"
+            >
+              Explore Event <Sparkles size={16} className="text-yellow-300" />
+            </Link>
+          )}
+        </div>
       </div>
+    </div>
+  );
+}
+
+export default function Events() {
+  return (
+    <div className="min-h-screen px-4 md:px-12 pt-28 pb-16 bg-black text-white flex flex-col gap-16">
+      {/* Upcoming Events */}
+      <section>
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+          Upcoming Events
+        </h2>
+        <p className="text-gray-300 mb-8 max-w-3xl">
+          Stay updated with our upcoming events and mark your calendars for innovative and engaging experiences.
+        </p>
+        <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 auto-rows-[1fr]">
+          {upcomingEvents.map((event, index) => (
+            <EventCard key={event.id} event={event} index={index} />
+          ))}
+        </div>
+      </section>
+
+      {/* Previous Events */}
+      <section>
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+          Previous Events
+        </h2>
+        <p className="text-gray-300 mb-8 max-w-3xl">
+          Here are some of the events we have successfully conducted in the past.
+        </p>
+        <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 auto-rows-[1fr]">
+          {previousEvents.map((event, index) => (
+            <EventCard key={event.id} event={event} index={index} />
+          ))}
+        </div>
+      </section>
 
       {/* Animations */}
       <style>{`
-        @keyframes fadeInUp {
-          from { opacity: 0; transform: translateY(30px); }
-          to { opacity: 1; transform: translateY(0); }
+        @keyframes fadeUp {
+          0% { opacity: 0; transform: translateY(30px); }
+          100% { opacity: 1; transform: translateY(0); }
         }
-        .animate-fadeInUp {
-          animation: fadeInUp 1s ease-out forwards;
-        }
-        .animate-gradient {
-          background-size: 200% 200%;
-          animation: gradientShift 5s ease infinite;
-        }
-        @keyframes gradientShift {
-          0% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-          100% { background-position: 0% 50%; }
-        }
-        @keyframes glowPulse {
-          0%, 100% { box-shadow: 0 0 6px rgba(219,39,119,0.6); }
-          50% { box-shadow: 0 0 15px rgba(219,39,119,0.9); }
-        }
-        .animate-glowPulse {
-          animation: glowPulse 3s ease-in-out infinite;
+        .animate-fadeUp {
+          animation: fadeUp 0.8s ease-out forwards;
         }
         .text-gradientPinkPurple {
           background: linear-gradient(90deg, #ec4899, #8b5cf6);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
         }
-        .line-clamp-3 {
-          display: -webkit-box;
-          -webkit-line-clamp: 3;
-          -webkit-box-orient: vertical;
-          overflow: hidden;
+        .border-gradient {
+          border-image: linear-gradient(to right, #ec4899, #8b5cf6) 1;
         }
       `}</style>
     </div>
