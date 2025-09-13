@@ -6,21 +6,11 @@ import orientation from "../assets/orientation.jpg";
 import cm from "../assets/coming soon.jpg";
 
 const upcomingEvents = [
-  {
-    id: 1,
-    title: "HACK FORGE - NATIONAL LEVEL HACKATHON",
-    date: "24 October 2025",
-    location: "Guru Nanak Institutions",
-    description:
-      "HackForge is a national-level hackathon that brings together the brightest minds from across the country to innovate, create, and collaborate. This is not just a coding competition—it’s a celebration of ideas, technology, and problem-solving. Participants are challenged to think outside the box, build impactful solutions, and showcase their creativity under a limited time frame. ",
-    img: cm,  
-    registrationLink: null,
-    detailsPage: "",
-  },
+
   {
     id: 2,
     title: "ENGINEER'S DAY",
-    date: "13 September 2025",
+    date: "19 September 2025",
     location: "Guru Gobind Singh Auditorium - GNI",
     description:
       "Join us for ENGINEER'S DAY – a day packed with innovation, skill, and creativity!",

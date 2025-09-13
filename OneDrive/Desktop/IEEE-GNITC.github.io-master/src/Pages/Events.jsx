@@ -64,7 +64,7 @@ function Events() {
               onClick={handleTechIgnitionClick}
               className="px-8 sm:px-12 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full text-white font-semibold tracking-wide text-lg shadow-md hover:shadow-lg hover:scale-105 active:scale-95 transition-transform duration-300"
             >
-              Join Tech Ignition
+              Checkout! Tech Ignition
             </button>
           </div>
 
@@ -82,7 +82,7 @@ function Events() {
               onClick={handleOrientationClick}
               className="px-8 sm:px-12 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full text-white font-semibold tracking-wide text-lg shadow-md hover:shadow-lg hover:scale-105 active:scale-95 transition-transform duration-300"
             >
-              Join Orientation
+              Checkout! Orientation
             </button>
           </div>
         </section>
