@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom"; // ✅ Step 1: Import
+import { useNavigate } from "react-router-dom";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -16,7 +16,7 @@ import circuits_and_systems_society from "../assets/circuits_and_systems_society
 
 const events = [
   { date: "25/05/2024", title: "Virtual Vista -1.0", subtitle: "IGNITE YOUR INTELLIGENCE - Computer Society", icon: computer_society },
-  { date: "13-6-2024", title: "TECH IGNITION - 1.0", subtitle: "IEEE Student Branch Inauguration", icon: IEEE },
+  { date: "13-06-2024", title: "TECH IGNITION - 1.0", subtitle: "IEEE Student Branch Inauguration", icon: IEEE },
   { date: "14/09/2024", title: "ENGINEER'S DAY", subtitle: "IEEE STUDENT BRANCH", icon: IEEE },
   { date: "28-09-2025", title: "IEEE DAY", subtitle: "Organized By - IEEE STUDENT BRANCH", icon: IEEE },
   { date: "21/11/2024", title: "HACK ARENA", subtitle: "Elevating Ideas Empowering Futures", icon: IEEE },
@@ -28,11 +28,12 @@ const events = [
   { date: "03/05/2025", title: "Virtual Vista 2.0", subtitle: "By Computer Society", icon: computer_society },
   { date: "13-06-2025", title: "Project Expo", subtitle: "By Power & Energy Society", icon: ieeepes },
   { date: "26/07/2025", title: "Orientation Day", subtitle: "By IEEE STUDENT BRANCH", icon: IEEE },
-  { date: "23-8-2025", title: "TECH IGNITION - 2.0", subtitle: " By IEEE STUDENT BRANCH", icon: IEEE },
+  { date: "23-08-2025", title: "TECH IGNITION - 2.0", subtitle: " By IEEE STUDENT BRANCH", icon: IEEE },
+  { date: "18/09/2025", title: "Engineer`s Day", subtitle: "By IEEE STUDENT BRANCH", icon: IEEE },
 ];
 
 function FutureEventTimeLine() {
-  const navigate = useNavigate(); // ✅ Step 2: useNavigate hook
+  const navigate = useNavigate();
 
   return (
     <div
@@ -51,18 +52,21 @@ function FutureEventTimeLine() {
         {events.map((event, index) => {
           const [day, month, year] = event.date.split(/[/-]/);
 
-          // ✅ Step 3: Define conditional click navigation
           const handleClick = () => {
-            if (event.title.toLowerCase().includes("tech ignition")) {
+            const title = event.title.toLowerCase();
+            if (title.includes("tech ignition")) {
               navigate("/tech");
-            } else if (event.title.toLowerCase().includes("orientation")) {
+            } else if (title.includes("orientation")) {
               navigate("/orientation");
+            } else if (title.includes("engineer")) {  // ✅ Redirect Engineer's Day
+              navigate("/engineersday");
             }
           };
 
           const isClickable =
             event.title.toLowerCase().includes("tech ignition") ||
-            event.title.toLowerCase().includes("orientation");
+            event.title.toLowerCase().includes("orientation") ||
+            event.title.toLowerCase().includes("engineer"); // ✅ Make Engineer's Day clickable
 
           return (
             <VerticalTimelineElement
@@ -74,7 +78,7 @@ function FutureEventTimeLine() {
                 borderRadius: "16px",
                 boxShadow: "0 0 20px rgba(168, 85, 247, 0.3)",
                 transition: "all 0.3s ease-in-out",
-                cursor: isClickable ? "pointer" : "default", // ✅ cursor
+                cursor: isClickable ? "pointer" : "default",
               }}
               contentArrowStyle={{ borderRight: "7px solid #a855f7" }}
               iconStyle={{
@@ -100,7 +104,6 @@ function FutureEventTimeLine() {
                 className={`relative group ${isClickable ? "hover:scale-[1.02] transition-transform duration-300" : ""}`}
                 onClick={isClickable ? handleClick : undefined}
               >
-                {/* Date badge */}
                 <div
                   className="absolute -top-7 -right-7 px-5 py-1 text-xs font-semibold rounded-full
                   bg-gradient-to-r from-purple-700 via-pink-600 to-indigo-700

@@ -4,23 +4,34 @@ import { Link } from "react-router-dom";
 import techImg from "../assets/tech.jpg";
 import orientation from "../assets/orientation.jpg";
 import cm from "../assets/coming soon.jpg";
+import en from "../assets/Engineer`s day/Engineer`s day.png"
 
 const upcomingEvents = [
-
   {
     id: 2,
-    title: "ENGINEER'S DAY",
-    date: "19 September 2025",
+    title: "IEEE DAY",
+    date: "7 October 2025",
     location: "Guru Gobind Singh Auditorium - GNI",
     description:
-      "Join us for ENGINEER'S DAY – a day packed with innovation, skill, and creativity!",
+      "Join us for IEEE DAY – a day packed with innovation, skill, and creativity!",
     img: cm,
-    registrationLink: null,
+    registrationLink: null, 
     detailsPage: "",
   },
 ];
 
 const previousEvents = [
+  {
+    id: 3,
+    title: "ENGINEER'S DAY",
+    date: "18 September 2025",
+    location: "Guru Gobind Singh Auditorium - GNI",
+    description:
+      "Join us for ENGINEER'S DAY – a day packed with innovation, skill, and creativity!",
+    img: en,
+    registrationLink: null,
+    detailsPage: "/engineersday",
+  },
   {
     id: 3,
     title: "TECH-IGNITION 2.0",
@@ -81,6 +92,7 @@ function EventCard({ event, index }) {
         </div>
 
         <div className="mt-4 flex flex-col gap-2">
+          {/* Show different button for upcoming events without registration link */}
           {event.registrationLink ? (
             <a
               href={event.registrationLink}
@@ -90,6 +102,10 @@ function EventCard({ event, index }) {
             >
               Register Now
             </a>
+          ) : upcomingEvents.find(e => e.id === event.id) ? ( 
+            <div className="w-full py-2 px-4 bg-gradient-to-r from-yellow-500 via-orange-500 to-pink-500 rounded-md text-white font-medium text-sm text-center flex items-center justify-center gap-2 animate-pulse">
+              <Sparkles size={16} /> Registrations Opening Soon
+            </div>
           ) : (
             <div className="w-full py-2 px-4 bg-gray-700 rounded-md text-gray-300 font-medium text-sm text-center flex items-center justify-center gap-2">
               <XCircle size={16} /> Registration Closed

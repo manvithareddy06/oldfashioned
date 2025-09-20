@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link as RouterLink, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo.jpg";
 
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);

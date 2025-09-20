@@ -3,6 +3,7 @@ import './App.css';
 import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import { Element } from 'react-scroll';
 
+// Pages
 import AboutUs from './Pages/AboutUs';
 import Contact from './Pages/Contact';
 import Events from './Pages/Events';
@@ -24,6 +25,9 @@ import Team from './Pages/Team';
 import PreviousTeam from './Pages/PreviousTeam';
 import Tech from './Pages/tech';
 import Orientation from './Pages/Orientation';
+import EngineersDay from './Pages/eng'; // ✅ File is eng.jsx
+
+// Assets
 import bgVideo from './assets/bg.mp4';
 
 const App1 = () => {
@@ -46,6 +50,7 @@ const App1 = () => {
 const App = () => {
   return (
     <>
+      {/* Background Video */}
       <video
         autoPlay
         muted
@@ -57,6 +62,7 @@ const App = () => {
         Your browser does not support the video tag.
       </video>
 
+      {/* Overlay Content */}
       <div className="content-overlay relative z-10">
         <Router>
           <Nav />
@@ -72,6 +78,7 @@ const App = () => {
             <Route path="/PreviousTeam" element={<PreviousTeam />} />
             <Route path="/tech" element={<Tech />} />
             <Route path="/orientation" element={<Orientation />} />
+            <Route path="/engineersday" element={<EngineersDay />} /> {/* ✅ Redirect works */}
           </Routes>
         </Router>
       </div>
