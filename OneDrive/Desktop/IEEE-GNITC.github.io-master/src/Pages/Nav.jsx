@@ -72,10 +72,8 @@ export default function Nav() {
           animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); 
           display: inline-block; 
         }
-        @keyframes fadeInUp {
-          0% { opacity: 0; transform: translateY(10px); }
-          100% { opacity: 1; transform: translateY(0); }
-        }
+        .nav-desktop-item:hover { transform: scale(1.1); transition: transform 0.3s ease; }
+        @keyframes fadeInUp { 0% { opacity: 0; transform: translateY(10px); } 100% { opacity: 1; transform: translateY(0); } }
         .animate-fadeInUp { animation: fadeInUp 0.4s ease forwards; }
         .hide-scrollbar::-webkit-scrollbar { display: none; }
         .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
@@ -83,11 +81,7 @@ export default function Nav() {
 
       <div className="flex items-center justify-between px-6 py-3 md:px-12 md:h-16">
         {/* Logo */}
-        <div
-          className={`flex items-center mr-auto transition-all duration-700 ease-out ${
-            logoVisible ? "opacity-100 scale-100" : "opacity-0 scale-75"
-          }`}
-        >
+        <div className={`flex items-center mr-auto transition-all duration-700 ease-out ${logoVisible ? "opacity-100 scale-100" : "opacity-0 scale-75"}`}>
           <span onClick={() => handleNavClick("home")}>
             <img
               src={logo}
@@ -142,18 +136,13 @@ export default function Nav() {
 
         {/* Mobile Toggle */}
         <div className="md:hidden flex items-center text-white">
-          <button onClick={toggleMenu}>
-            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
+          <button onClick={toggleMenu}>{isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}</button>
         </div>
       </div>
 
       {/* Mobile Menu Overlay */}
       {isOpen && (
-        <div
-          className="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm transition-opacity duration-500"
-          onClick={closeMenu}
-        />
+        <div className="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm transition-opacity duration-500" onClick={closeMenu} />
       )}
 
       {/* Mobile Dropdown */}
