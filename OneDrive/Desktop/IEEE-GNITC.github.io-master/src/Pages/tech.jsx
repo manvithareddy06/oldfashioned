@@ -68,20 +68,20 @@ export default function TechIgnition() {
     <div className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-black text-white">
       {/* Hero Section */}
       <motion.div
-        className="pt-28 pb-16 px-6 max-w-6xl mx-auto text-center"
+        className="pt-28 pb-16 px-6 max-w-6xl mx-auto text-left md:text-center"
         initial={{ opacity: 0, y: -40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-transparent animate-blueRedGlow drop-shadow-2xl">
-        ⚡TECH-IGNITION
+        <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-transparent animate-orangeGlow drop-shadow-2xl">
+          ⚡TECH-IGNITION
         </h1>
-        <p className="mt-4 sm:mt-6 text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+        <p className="mt-4 sm:mt-6 text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed text-left md:text-center">
           A flagship technical fest by{" "}
-          <span className="text-cyan-400 font-semibold">IEEE GNI</span> — where{" "}
-          <span className="text-pink-400 font-semibold">creativity</span>,{" "}
-          <span className="text-purple-400 font-semibold">innovation</span>, and{" "}
-          <span className="text-cyan-400 font-semibold">tech brilliance</span>{" "}
+          <span className="text-orange-400 font-semibold">IEEE GNI</span> — where{" "}
+          <span className="text-yellow-400 font-semibold">creativity</span>,{" "}
+          <span className="text-orange-300 font-semibold">innovation</span>, and{" "}
+          <span className="text-orange-500 font-semibold">tech brilliance</span>{" "}
           ignite the future.
         </p>
       </motion.div>
@@ -89,7 +89,7 @@ export default function TechIgnition() {
       {/* Tech-Ignition 2.0 Section */}
       <section className="max-w-6xl mx-auto px-6 space-y-10">
         <motion.h2
-          className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-white text-center"
+          className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-orange-400 text-left md:text-center"
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
@@ -98,32 +98,31 @@ export default function TechIgnition() {
         </motion.h2>
 
         <motion.p
-          className="text-gray-300 text-base sm:text-lg md:text-xl leading-relaxed max-w-4xl mx-auto text-center"
+          className="text-gray-300 text-base sm:text-lg md:text-xl leading-relaxed max-w-4xl mx-auto text-left md:text-center"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.8 }}
         >
           Tech-Ignition 2.0 is{" "}
-          <span className="text-cyan-400 font-semibold">bigger</span>,{" "}
-          <span className="text-pink-400 font-semibold">bolder</span>, and{" "}
-          <span className="text-purple-400 font-semibold">brighter</span>! From{" "}
-          <span className="text-cyan-400">UI/UX Design</span> to{" "}
-          <span className="text-pink-400">E-Sports</span>, brace yourself for an
+          <span className="text-orange-400 font-semibold">bigger</span>,{" "}
+          <span className="text-yellow-400 font-semibold">bolder</span>, and{" "}
+          <span className="text-orange-300 font-semibold">brighter</span>! From{" "}
+          <span className="text-orange-400">UI/UX Design</span> to{" "}
+          <span className="text-yellow-400">E-Sports</span>, brace yourself for an
           electrifying celebration of technology and talent.
         </motion.p>
 
         {/* Event Info Card */}
-                {/* Event Info Card */}
         <motion.div
-          className="bg-black/50 backdrop-blur-lg border border-cyan-400/30 rounded-2xl p-6 sm:p-8 shadow-[0_0_25px_rgba(0,255,255,0.2)] hover:shadow-[0_0_40px_rgba(0,255,255,0.4)] transition-all max-w-4xl mx-auto text-center"
+          className="bg-black/50 backdrop-blur-lg border border-orange-400/30 rounded-2xl p-6 sm:p-8 shadow-[0_0_25px_rgba(255,165,0,0.2)] hover:shadow-[0_0_40px_rgba(255,165,0,0.4)] transition-all max-w-4xl mx-auto text-left md:text-center"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.8 }}
         >
-          <h3 className="text-lg sm:text-xl font-bold text-white mb-4 text-center">
+          <h3 className="text-lg sm:text-xl font-bold text-orange-400 mb-4">
             📌 Event Details
           </h3>
-          <div className="grid md:grid-cols-3 gap-6 text-center text-gray-300">
+          <div className="grid md:grid-cols-3 gap-6 text-gray-300">
             <div>
               📍 Venue: <span className="text-white">Guru Nanak Institutions</span>
             </div>
@@ -136,16 +135,15 @@ export default function TechIgnition() {
             </div>
           </div>
         </motion.div>
-
       </section>
 
       {/* Carousel 2 for 2.0 */}
       <section className="mt-16 px-6">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-6 sm:mb-10 text-center">
-          Check Out ! Tech-Ignition 2.0
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-WHITE-400 mb-6 sm:mb-10 text-left md:text-center">
+          CHECK OUT! TECH-IGNITION 2.0
         </h2>
 
-        <div className="relative w-full max-w-5xl mx-auto overflow-hidden rounded-3xl shadow-lg border border-pink-400/30 backdrop-blur-lg">
+        <div className="relative w-full max-w-5xl mx-auto overflow-hidden rounded-3xl shadow-lg border border-orange-400/30 backdrop-blur-lg">
           <img
             src={images2[currentIndex2]}
             alt={`Tech Ignition 2.0 - ${currentIndex2 + 1}`}
@@ -155,13 +153,13 @@ export default function TechIgnition() {
           {/* Arrows */}
           <button
             onClick={prevSlide2}
-            className="absolute top-1/2 -translate-y-1/2 left-4 p-2 sm:p-3 rounded-full bg-black/60 border border-pink-400/50 hover:scale-110 transition-all"
+            className="absolute top-1/2 -translate-y-1/2 left-4 p-2 sm:p-3 rounded-full bg-black/60 border border-orange-400/50 hover:scale-110 transition-all"
           >
             <ChevronLeft size={24} />
           </button>
           <button
             onClick={nextSlide2}
-            className="absolute top-1/2 -translate-y-1/2 right-4 p-2 sm:p-3 rounded-full bg-black/60 border border-pink-400/50 hover:scale-110 transition-all"
+            className="absolute top-1/2 -translate-y-1/2 right-4 p-2 sm:p-3 rounded-full bg-black/60 border border-orange-400/50 hover:scale-110 transition-all"
           >
             <ChevronRight size={24} />
           </button>
@@ -172,7 +170,7 @@ export default function TechIgnition() {
               <div
                 key={idx}
                 className={`h-1.5 rounded-full transition-all ${
-                  currentIndex2 === idx ? "w-6 bg-pink-400" : "w-2 bg-gray-500/50"
+                  currentIndex2 === idx ? "w-6 bg-orange-400" : "w-2 bg-gray-500/50"
                 }`}
               />
             ))}
@@ -182,11 +180,11 @@ export default function TechIgnition() {
 
       {/* Tech-Ignition 1.0 Section */}
       <section className="mt-20 px-6">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-6 sm:mb-10 text-center">
-          Highlights From Tech-Ignition 1.0
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-WHITE-400 mb-6 sm:mb-10 text-left md:text-center">
+        HIGHLIGHTS FROM TECH-IGNITION 1.0
         </h2>
 
-        <div className="relative w-full max-w-5xl mx-auto overflow-hidden rounded-3xl shadow-lg border border-cyan-400/30 backdrop-blur-lg">
+        <div className="relative w-full max-w-5xl mx-auto overflow-hidden rounded-3xl shadow-lg border border-orange-400/30 backdrop-blur-lg">
           <img
             src={images1[currentIndex1]}
             alt={`Tech Ignition 1.0 - ${currentIndex1 + 1}`}
@@ -196,13 +194,13 @@ export default function TechIgnition() {
           {/* Arrows */}
           <button
             onClick={prevSlide1}
-            className="absolute top-1/2 -translate-y-1/2 left-4 p-2 sm:p-3 rounded-full bg-black/60 border border-cyan-400/50 hover:scale-110 transition-all"
+            className="absolute top-1/2 -translate-y-1/2 left-4 p-2 sm:p-3 rounded-full bg-black/60 border border-orange-400/50 hover:scale-110 transition-all"
           >
             <ChevronLeft size={24} />
           </button>
           <button
             onClick={nextSlide1}
-            className="absolute top-1/2 -translate-y-1/2 right-4 p-2 sm:p-3 rounded-full bg-black/60 border border-cyan-400/50 hover:scale-110 transition-all"
+            className="absolute top-1/2 -translate-y-1/2 right-4 p-2 sm:p-3 rounded-full bg-black/60 border border-orange-400/50 hover:scale-110 transition-all"
           >
             <ChevronRight size={24} />
           </button>
@@ -213,7 +211,7 @@ export default function TechIgnition() {
               <div
                 key={idx}
                 className={`h-1.5 rounded-full transition-all ${
-                  currentIndex1 === idx ? "w-6 bg-cyan-400" : "w-2 bg-gray-500/50"
+                  currentIndex1 === idx ? "w-6 bg-orange-400" : "w-2 bg-gray-500/50"
                 }`}
               />
             ))}
@@ -223,18 +221,18 @@ export default function TechIgnition() {
 
       {/* Glow Animation */}
       <style>{`
-        @keyframes blueRedGlow {
+        @keyframes orangeGlow {
           0%, 100% { 
-            color: #00aaff;
-            text-shadow: 0 0 15px #00aaff, 0 0 35px #00aaff;
+            color: #ffa500;
+            text-shadow: 0 0 15px #ffa500, 0 0 35px #ff8c00;
           }
           50% { 
-            color: #ff0033;
-            text-shadow: 0 0 20px #ff0033, 0 0 45px #ff0033;
+            color: #ff4500;
+            text-shadow: 0 0 20px #ff4500, 0 0 45px #ff6347;
           }
         }
-        .animate-blueRedGlow {
-          animation: blueRedGlow 3s infinite alternate;
+        .animate-orangeGlow {
+          animation: orangeGlow 3s infinite alternate;
         }
       `}</style>
     </div>
