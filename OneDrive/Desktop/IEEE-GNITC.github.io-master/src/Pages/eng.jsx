@@ -30,7 +30,7 @@ export default function EngineersDay() {
         {/* Mobile Header */}
         <div className="md:hidden">
           <h1 className="text-3xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 animate-gradient drop-shadow-lg">
-            Engineer’s Day – IEEE GNI
+            Engineer’s Day
           </h1>
           <p className="text-gray-300 mt-4 text-base leading-relaxed text-left">
             Engineer’s Day at IEEE GNI is a tribute to innovation, creativity, and

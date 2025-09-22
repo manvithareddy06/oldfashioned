@@ -54,7 +54,7 @@ function Events() {
           {/* ENGINEER'S DAY */}
           <div className="relative w-full rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 text-left sm:text-center md:text-left lg:text-left border border-white/10 bg-white/5 backdrop-blur-xl shadow-[0_8px_30px_rgba(0,0,0,0.3)] hover:shadow-[0_8px_40px_rgba(56,189,248,0.4)] hover:scale-[1.02] transition-all duration-500">
             <h3 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-extrabold mb-4 sm:mb-6 md:mb-4 lg:mb-6 tracking-tight text-yellow-400">
-              ENGINEER'S DAY – IEEE GNI
+              ENGINEER'S DAY 
             </h3>
             <p className="text-sm sm:text-base md:text-sm lg:text-base max-w-full sm:max-w-3xl md:max-w-2xl lg:max-w-3xl text-white/85 mb-6 sm:mb-8 md:mb-6 lg:mb-8 leading-relaxed font-medium">
               Celebrate innovation, creativity, and problem-solving on Engineer's Day at IEEE GNI. Engage in exciting workshops, technical challenges, and showcases across multiple domains.
