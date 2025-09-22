@@ -5,7 +5,13 @@ import Mauryan from "../assets/people/mauryan.png";
 import subbalaxmi from "../assets/people/subbalaxmi.png";
 import drravindra from "../assets/people/drravindra.png"; 
 import Surendra from "../assets/people/Surendra.png"; 
+import arun from "../assets/people/Aruns.jpg"; 
 const FacultyInfoSecondary = [
+    {
+    name: "Mr.Arun Singh Kaurav",
+    img: arun,
+    role: "Faculty Advisor - Computer Society",
+  },
 
   {
     name: "Dr. Rashid Mohmad",
