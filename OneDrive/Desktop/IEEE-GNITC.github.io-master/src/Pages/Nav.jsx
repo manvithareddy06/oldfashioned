@@ -56,7 +56,7 @@ export default function Nav() {
   };
 
   return (
-    <div className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-black/40 border-b border-gray-700 shadow-lg">
+    <div className="fixed top-0 w-full z-50 backdrop-blur-md bg-black/40 border-b border-gray-700 shadow-lg transition-colors duration-500">
       <style>{`
         @keyframes slideUpBounce {
           0% { opacity: 0; transform: translateY(20px); }
@@ -79,20 +79,20 @@ export default function Nav() {
         .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
       `}</style>
 
-      <div className="flex items-center justify-between px-6 py-3 md:px-12 md:h-16">
+      <div className="flex items-center justify-between px-4 py-2 md:px-8 md:h-14">
         {/* Logo */}
         <div className={`flex items-center mr-auto transition-all duration-700 ease-out ${logoVisible ? "opacity-100 scale-100" : "opacity-0 scale-75"}`}>
           <span onClick={() => handleNavClick("home")}>
             <img
               src={logo}
               alt="Gnitc"
-              className="h-8 md:h-10 w-auto rounded-xl cursor-pointer transform transition-all duration-500 hover:scale-110 hover:rotate-1"
+              className="h-7 md:h-10 w-auto rounded-xl cursor-pointer transform transition-all duration-500 hover:scale-110 hover:rotate-1"
             />
           </span>
         </div>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-6 font-medium ml-auto">
+        <div className="hidden md:flex overflow-x-auto hide-scrollbar gap-x-5 lg:gap-x-6 items-center font-medium whitespace-nowrap ml-auto">
           {navItem("About Us", "aboutus", 0)}
           {navItem("Societies", "societies", 1)}
           {navItem("Explore Events", "events", 2)}
