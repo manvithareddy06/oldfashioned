@@ -62,21 +62,10 @@ export default function Nav() {
     <div className="fixed top-0 w-full z-50 backdrop-blur-md bg-black/40 border-b border-gray-700 shadow-lg transition-colors duration-500">
       <style>{`
         @keyframes slideUpBounce {
-          0% {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          60% {
-            opacity: 1;
-            transform: translateY(-10px);
-          }
-          80% {
-            transform: translateY(5px);
-          }
-          100% {
-            opacity: 1;
-            transform: translateY(0);
-          }
+          0% { opacity: 0; transform: translateY(20px); }
+          60% { opacity: 1; transform: translateY(-10px); }
+          80% { transform: translateY(5px); }
+          100% { opacity: 1; transform: translateY(0); }
         }
         .nav-desktop-item {
           opacity: 0;
@@ -91,24 +80,20 @@ export default function Nav() {
           transition: transform 0.3s ease;
         }
         @keyframes fadeInUp {
-          0% {
-            opacity: 0;
-            transform: translateY(10px);
-          }
-          100% {
-            opacity: 1;
-            transform: translateY(0);
-          }
+          0% { opacity: 0; transform: translateY(10px); }
+          100% { opacity: 1; transform: translateY(0); }
         }
-        .animate-fadeInUp {
-          animation: fadeInUp 0.4s ease forwards;
-        }
+        .animate-fadeInUp { animation: fadeInUp 0.4s ease forwards; }
+
+        /* Hide scrollbar for horizontal scroll */
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
       `}</style>
 
-      <div className="max-w-[1400px] mx-auto flex items-center justify-between px-6 py-2 md:px-10 md:h-14">
-        {/* Logo */}
+      <div className="relative flex items-center justify-between px-4 py-2 md:px-10 md:h-14">
+        {/* Logo (always pinned left) */}
         <div
-          className={`flex items-center transition-all duration-700 ease-out ${
+          className={`absolute left-4 flex items-center transition-all duration-700 ease-out ${
             logoVisible ? "opacity-100 scale-100" : "opacity-0 scale-75"
           }`}
         >
@@ -116,13 +101,13 @@ export default function Nav() {
             <img
               src={logo}
               alt="Gnitc"
-              className="h-8 sm:h-9 md:h-12 lg:h-14 w-auto object-contain rounded-xl cursor-pointer transform transition-all duration-500 hover:scale-110 hover:rotate-1"
+              className="h-7 md:h-10 w-auto rounded-xl cursor-pointer transform transition-all duration-500 hover:scale-110 hover:rotate-1"
             />
           </span>
         </div>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-x-8 ml-12 font-medium whitespace-nowrap">
+        <div className="hidden md:flex overflow-x-auto hide-scrollbar gap-x-6 items-center font-medium whitespace-nowrap ml-auto">
           {navItem("About Us", "aboutus", 0)}
           {navItem("Societies", "societies", 1)}
           {navItem("Explore Events", "events", 2)}
@@ -169,8 +154,8 @@ export default function Nav() {
           </a>
         </div>
 
-        {/* Mobile Toggle */}
-        <div className="md:hidden flex items-center text-white">
+        {/* Mobile Toggle (kept right) */}
+        <div className="md:hidden flex items-center text-white ml-auto">
           <button onClick={toggleMenu}>
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>

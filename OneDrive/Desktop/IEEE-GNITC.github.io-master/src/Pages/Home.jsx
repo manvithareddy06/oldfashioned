@@ -30,7 +30,7 @@ export default function Home() {
       {/* Main Content */}
       <div className="z-10 flex flex-col items-center justify-center text-center px-6 space-y-8 animate-fadeInUp">
         {/* Title */}
-        <h1 className="text-6xl md:text-8xl font-extrabold tracking-tight drop-shadow-2xl relative">
+        <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight drop-shadow-2xl relative">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-white to-blue-600 animate-blueGlow">
             IEEE
           </span>{" "}
