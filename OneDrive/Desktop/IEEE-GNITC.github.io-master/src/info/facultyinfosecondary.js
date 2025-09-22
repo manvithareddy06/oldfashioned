@@ -1,4 +1,4 @@
-import drgeethatripati from "../assets/people/Dr.GeethaTripathi.jpg";
+
 import drrashidmohmad from "../assets/people/DrMdRashidMahmood.png";
 import drsmkmabbasahmed from "../assets/people/Dr.S.M.K.M.AbbasAhmad.png";
 import Mauryan from "../assets/people/mauryan.png";
@@ -6,11 +6,7 @@ import subbalaxmi from "../assets/people/subbalaxmi.png";
 import drravindra from "../assets/people/drravindra.png"; 
 import Surendra from "../assets/people/Surendra.png"; 
 const FacultyInfoSecondary = [
-  {
-    name: "Dr. Geeta Tripathi",
-    img: drgeethatripati,
-    role: "Faculty Advisor - Computer Society",
-  },
+
   {
     name: "Dr. Rashid Mohmad",
     img: drrashidmohmad,

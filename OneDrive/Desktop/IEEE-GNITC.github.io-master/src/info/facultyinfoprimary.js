@@ -1,9 +1,9 @@
-import drharishkundra from "../assets/people/Dr.HarishKundra.png";
+
 import drrishisayal from "../assets/people/DrRishiSayal.png";
 import santoshkumar from "../assets/people/santoshkumar.png"; 
 import sreenathareddy from "../assets/people/sreenathareddy.png"; 
 import drkvenkatrao from "../assets/people/Dr.K.VenkatRao.png";
-
+import drgeethatripati from "../assets/people/Dr.GeethaTripathi.jpg";
 const FacultyInfoPrimary = [
   {
     name: "Dr. S. Sreenatha Reddy",
@@ -20,16 +20,16 @@ const FacultyInfoPrimary = [
     img: drrishisayal,
     role: "IEEE BRANCH COUNSELLOR",
   },
-    {
-    name: "Dr. Harish Kundra",
-    img: drharishkundra,
-    role: "IEEE BRANCH COORDINATOR, GNITC",
-  },
   {
     name: "Dr. B. Santosh Kumar",
     img: santoshkumar,
     role: "IEEE BRANCH COUNSELLOR, GNIT",
   },
+    {
+      name: "Dr. Geeta Tripathi",
+      img: drgeethatripati,
+      role: "Faculty Advisor - Computer Society",
+    },
 ];
 
 export default FacultyInfoPrimary;
