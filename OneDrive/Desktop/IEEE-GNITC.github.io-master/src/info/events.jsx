@@ -26,6 +26,15 @@ const RegisterComponent = (
 );
 
 const EventInfo = [
+          {
+      id: "#",
+      title: "HACK ARENA",
+      img:<iframe width="560" height="315" src="https://www.youtube.com/embed/eS7y7l_4ejU?si=6hD2l4pjYKKZ-U64" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>,
+      content:
+        "Elevating ideas empowering futures..."       
+       ,
+
+    },
     {
       id: "1",
       title: "Virtual Vista 1.0",
@@ -125,18 +134,7 @@ const EventInfo = [
         "Vitual Vista panel 5"       
        ,
 
-    },
-        {
-      id: "#",
-      title: "HACK ARENA",
-      img:<iframe width="560" height="315" src="https://www.youtube.com/embed/eS7y7l_4ejU?si=6hD2l4pjYKKZ-U64" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>,
-      content:
-        "Elevating ideas empowering futures..."       
-       ,
-
-    },
-
-    
+    },    
   ];
 
 const moreInfo1 =[
