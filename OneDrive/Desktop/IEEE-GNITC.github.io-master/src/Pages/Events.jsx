@@ -33,8 +33,8 @@ function Events() {
       <div className="relative z-10 space-y-28">
         {/* Section Heading */}
         <div className="animate-fadeIn">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-red-400 via-red-500 to-purple-500 text-transparent bg-clip-text drop-shadow-md text-left md:text-left lg:text-center">
-            Check us out!
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-red-400 via-blue-500 to-red-500 text-transparent bg-clip-text drop-shadow-md text-left md:text-left lg:text-center">
+            Check Us Out!
           </h2>
           <p className="text-left md:text-left lg:text-center mt-4">
             Discover upcoming highlights and relive memorable milestones with{" "}

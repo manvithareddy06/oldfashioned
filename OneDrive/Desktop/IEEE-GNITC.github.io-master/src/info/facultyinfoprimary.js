@@ -1,4 +1,3 @@
-
 import drrishisayal from "../assets/people/DrRishiSayal.png";
 import santoshkumar from "../assets/people/santoshkumar.png"; 
 import sreenathareddy from "../assets/people/sreenathareddy.png"; 
@@ -18,7 +17,7 @@ const FacultyInfoPrimary = [
   {
     name: "Dr. Rishi Sayal",
     img: drrishisayal,
-    role: "IEEE BRANCH COUNSELLOR",
+    role: "IEEE BRANCH COUNSELLOR, GNITC",
   },
   {
     name: "Dr. B. Santosh Kumar",
@@ -28,7 +27,7 @@ const FacultyInfoPrimary = [
     {
       name: "Dr. Geeta Tripathi",
       img: drgeethatripati,
-      role: "Faculty Advisor - Computer Society",
+      role: "IEEE BRANCH COORDINATOR, GNITC",
     },
 ];
 
