@@ -5,23 +5,34 @@ import techImg from "../assets/tech.jpg";
 import orientation from "../assets/orientation.jpg";
 import cm from "../assets/coming soon.jpg";
 import en from "../assets/Engineer`s day/Engineer`s day.png"
+import ie from "../assets/IEEE DAY/6.jpg"
 
 const upcomingEvents = [
 {
   id: 2,
-  title: "IEEE DAY",
-  date: "7 October 2025",
-  location: "Guru Gobind Singh Auditorium - GNI",
+  title: "ANNOUNCING SOON",
+  date: "-",
+  location: "GNI",
   description:
-    "Join us for IEEE DAY – a day packed with innovation, skill, and creativity!",
+    "",
   img: cm,
   registrationLink: null,
-  detailsPage: "/ieeeday", 
 },
 
 ];
 
 const previousEvents = [
+  {
+  id: 3,
+  title: "IEEE DAY",
+  date: "11 October 2025",
+  location: "Shaheed bhagath singh - GNI",
+  description:
+    "Join us for IEEE DAY – a day packed with innovation, skill, and creativity!",
+  img: ie,
+  registrationLink: null,
+  detailsPage: "/ieeeday", 
+},
   {
     id: 3,
     title: "ENGINEER'S DAY",

@@ -20,6 +20,7 @@ function Events() {
   const handleTechIgnitionClick = () => navigate("/tech");
   const handleOrientationClick = () => navigate("/orientation");
   const handleEngineersDayClick = () => navigate("/engineersday");
+  const handleIEEEDayClick = () => navigate("/ieeeday");
 
   return (
     <div
@@ -43,7 +44,7 @@ function Events() {
         </div>
 
         {/* ----------------- 2025 EVENTS ----------------- */}
-           <section className="space-y-16 animate-fadeInUp">
+        <section className="space-y-16 animate-fadeInUp">
           <div className="flex flex-col items-center space-y-3">
             <h3 className="flex items-center gap-2 text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-extrabold text-center uppercase tracking-wide text-red-400 drop-shadow-sm">
               <Calendar className="w-6 h-6 sm:w-7 sm:h-7" /> EVENTS 2025
@@ -51,13 +52,33 @@ function Events() {
             <div className="h-1 w-28 sm:w-40 md:w-36 lg:w-40 bg-gradient-to-r from-red-400 via-red-500 to-cyan-400 rounded-full opacity-80"></div>
           </div>
 
+          {/* IEEE DAY */}
+          <div className="relative w-full rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 text-left sm:text-center md:text-left lg:text-left border border-white/10 bg-white/5 backdrop-blur-xl shadow-[0_8px_30px_rgba(0,0,0,0.3)] hover:shadow-[0_8px_40px_rgba(56,189,248,0.4)] hover:scale-[1.02] transition-all duration-500">
+            <h3 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-extrabold mb-4 sm:mb-6 md:mb-4 lg:mb-6 tracking-tight text-blue-400">
+              IEEE DAY
+            </h3>
+            <p className="text-sm sm:text-base md:text-sm lg:text-base max-w-full sm:max-w-3xl md:max-w-2xl lg:max-w-3xl text-white/85 mb-6 sm:mb-8 md:mb-6 lg:mb-8 leading-relaxed font-medium">
+              Celebrate global innovation and collaboration with{" "}
+              <span className="text-blue-300 font-semibold">IEEE DAY</span>!  
+              A day dedicated to technology enthusiasts and innovators coming together 
+              to share ideas, explore advancements, and celebrate the spirit of engineering excellence.
+            </p>
+            <button
+              onClick={handleIEEEDayClick}
+              className="px-6 sm:px-8 md:px-10 lg:px-12 py-2 sm:py-3 bg-gradient-to-r from-blue-500 via-cyan-400 to-indigo-500 rounded-full text-white font-semibold tracking-wide text-sm sm:text-base md:text-sm lg:text-lg shadow-md hover:shadow-lg hover:scale-105 active:scale-95 transition-transform duration-300"
+            >
+              Explore IEEE Day
+            </button>
+          </div>
+
           {/* ENGINEER'S DAY */}
           <div className="relative w-full rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 text-left sm:text-center md:text-left lg:text-left border border-white/10 bg-white/5 backdrop-blur-xl shadow-[0_8px_30px_rgba(0,0,0,0.3)] hover:shadow-[0_8px_40px_rgba(56,189,248,0.4)] hover:scale-[1.02] transition-all duration-500">
             <h3 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-extrabold mb-4 sm:mb-6 md:mb-4 lg:mb-6 tracking-tight text-yellow-400">
-              ENGINEER'S DAY 
+              ENGINEER'S DAY
             </h3>
             <p className="text-sm sm:text-base md:text-sm lg:text-base max-w-full sm:max-w-3xl md:max-w-2xl lg:max-w-3xl text-white/85 mb-6 sm:mb-8 md:mb-6 lg:mb-8 leading-relaxed font-medium">
-              Celebrate innovation, creativity, and problem-solving on Engineer's Day at IEEE GNI. Engage in exciting workshops, technical challenges, and showcases across multiple domains.
+              Celebrate innovation, creativity, and problem-solving on Engineer's Day at IEEE GNI. 
+              Engage in exciting workshops, technical challenges, and showcases across multiple domains.
             </p>
             <button
               onClick={handleEngineersDayClick}
@@ -104,7 +125,7 @@ function Events() {
           </div>
         </section>
 
-        {/* EVENTS 2024 */}
+        {/* ----------------- 2024 EVENTS ----------------- */}
         <section className="space-y-16 animate-fadeInUp">
           <div className="flex flex-col items-center space-y-3">
             <h3 className="flex items-center gap-2 text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-extrabold text-center uppercase tracking-wide text-red-400 drop-shadow-sm">
