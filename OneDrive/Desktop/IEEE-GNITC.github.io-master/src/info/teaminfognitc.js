@@ -13,15 +13,11 @@ import arshad from "../assets/people/arshad.jpg";
 import abhinv from "../assets/people/abhinv.jpg";
 import om from "../assets/people/om.jpg";
 const TeamInfo = [
-  {
-    name: "Mohammed Abdul Rahman",
-    img: abdul,
-    role: "CHAIR",
-  },
+
   {
     name: "Abhinav Erolla",
     img: abhinav,
-    role: "VICE CHAIR",
+    role: "CHAIR",
   },
   {
     name: "P R S Santosh Naidu",
@@ -33,21 +29,22 @@ const TeamInfo = [
     img: manogna,
     role: "SECRETARY",
   },
-      {
-    name: "N. Yashaswini",
-    img: nyashaswini,
-    role: "GENERAL SECRETARY",
-  },
-          {
-    name: "K Sai Lohith",
-    img: sailohith,
-    role: "TREASURER",
-  },
           {
     name: "Om Maynale",
     img: om,
     role: "WEB MASTER",
   },
+            {
+    name: "K Sai Lohith",
+    img: sailohith,
+    role: "TREASURER",
+  },
+          {
+    name: "N. Yashaswini",
+    img: nyashaswini,
+    role: "GENERAL SECRETARY",
+  },
+
         {
     name: "Shreya",
     img: shreya,

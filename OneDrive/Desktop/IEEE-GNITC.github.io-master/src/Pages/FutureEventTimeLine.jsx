@@ -30,6 +30,7 @@ const events = [
   { date: "26/07/2025", title: "Orientation Day", subtitle: "By IEEE STUDENT BRANCH", icon: IEEE },
   { date: "23-08-2025", title: "TECH IGNITION - 2.0", subtitle: " By IEEE STUDENT BRANCH", icon: IEEE },
   { date: "18/09/2025", title: "Engineer`s Day", subtitle: "By IEEE STUDENT BRANCH", icon: IEEE },
+  { date: "11-10-2025", title: "IEEE DAY 2025", subtitle: "By IEEE STUDENT BRANCH", icon: IEEE },
 ];
 
 function FutureEventTimeLine() {
@@ -52,21 +53,27 @@ function FutureEventTimeLine() {
         {events.map((event, index) => {
           const [day, month, year] = event.date.split(/[/-]/);
 
+          // ✅ Navigation logic
           const handleClick = () => {
             const title = event.title.toLowerCase();
+
             if (title.includes("tech ignition")) {
               navigate("/tech");
             } else if (title.includes("orientation")) {
               navigate("/orientation");
-            } else if (title.includes("engineer")) {  // ✅ Redirect Engineer's Day
+            } else if (title.includes("engineer")) {
               navigate("/engineersday");
+            } else if (title.includes("ieee day")) {
+              navigate("/ieeeday"); // ✅ Added this line for IEEE Day page
             }
           };
 
+          // ✅ Make these clickable
           const isClickable =
             event.title.toLowerCase().includes("tech ignition") ||
             event.title.toLowerCase().includes("orientation") ||
-            event.title.toLowerCase().includes("engineer"); // ✅ Make Engineer's Day clickable
+            event.title.toLowerCase().includes("engineer") ||
+            event.title.toLowerCase().includes("ieee day");
 
           return (
             <VerticalTimelineElement
@@ -101,7 +108,11 @@ function FutureEventTimeLine() {
               }
             >
               <div
-                className={`relative group ${isClickable ? "hover:scale-[1.02] transition-transform duration-300" : ""}`}
+                className={`relative group ${
+                  isClickable
+                    ? "hover:scale-[1.02] transition-transform duration-300"
+                    : ""
+                }`}
                 onClick={isClickable ? handleClick : undefined}
               >
                 <div
@@ -119,9 +130,7 @@ function FutureEventTimeLine() {
                 </div>
 
                 <div className="p-3 transform transition-transform duration-500 hover:scale-105 hover:rotate-1">
-                  <h3 className="text-xl font-bold text-white">
-                    {event.title}
-                  </h3>
+                  <h3 className="text-xl font-bold text-white">{event.title}</h3>
                   <h4 className="text-sm text-white mt-2 italic font-medium">
                     {event.subtitle}
                   </h4>

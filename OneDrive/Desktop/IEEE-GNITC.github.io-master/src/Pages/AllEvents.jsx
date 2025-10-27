@@ -7,17 +7,18 @@ import cm from "../assets/coming soon.jpg";
 import en from "../assets/Engineer`s day/Engineer`s day.png"
 
 const upcomingEvents = [
-  {
-    id: 2,
-    title: "IEEE DAY",
-    date: "7 October 2025",
-    location: "Guru Gobind Singh Auditorium - GNI",
-    description:
-      "Join us for IEEE DAY – a day packed with innovation, skill, and creativity!",
-    img: cm,
-    registrationLink: null, 
-    detailsPage: "",
-  },
+{
+  id: 2,
+  title: "IEEE DAY",
+  date: "7 October 2025",
+  location: "Guru Gobind Singh Auditorium - GNI",
+  description:
+    "Join us for IEEE DAY – a day packed with innovation, skill, and creativity!",
+  img: cm,
+  registrationLink: null,
+  detailsPage: "/ieeeday", 
+},
+
 ];
 
 const previousEvents = [

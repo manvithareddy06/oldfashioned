@@ -12,38 +12,36 @@ import jogendra from "../assets/people/jogendra.png";
 import rizwan from "../assets/people/rizwan.png";
 import snehith from "../assets/people/snehith.png";
 const TeamInfo = [
-     {
-    name: "Mohammad Raziuallah Riyan",
-    img: riyan,
-    role: "CHAIR",
-  },
+
  {
     name: "Sayali Ingale",
     img: sayaliingale,
-    role: "VICE CHAIR",
+    role: "CHAIR",
   },
 
        {
     name: "Rupa Reddy Kunam",
     img: rupareddy,
+    role: "VICE CHAIR",
+  },
+
+   {
+    name: "Rishika Nagulapally",
+    img: rishika,
     role: "SECRETARY",
   },
 
-    {
-    name: "Sathwika Reddy Dera",
-    img: sathwika,
-    role: "TREASURER",
-  },
 
    {
     name: "Advait Kasturi",
     img: advaitkasturi,
     role: "TECH LEAD",
   },
-   {
-    name: "Rishika Nagulapally",
-    img: rishika,
-    role: "DESIGN LEAD",
+
+      {
+    name: "Sathwika Reddy Dera",
+    img: sathwika,
+    role: "TREASURER",
   },
 
         {
