@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>WELCOME 2 MY COOL SITE!!!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    /* Intentionally bad, messy, and old-fashioned styles */
+    body {
+      margin: 0;
+      background: repeating-linear-gradient(45deg, #fffb00, #fffb00 10px, #ff00f2 10px, #ff00f2 20px);
+      font-family: "Comic Sans MS", Papyrus, cursive;
+      color: #000;
+      cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><text y="24" font-size="24">✨</text></svg>') 0 0, auto;
+    }
+    table.layout { width: 100%; height: 100vh; border: 10px ridge #00ffea; background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><rect width="40" height="40" fill="%23e0ffe0"/><circle cx="20" cy="20" r="6" fill="%2399ccff"/></svg>'); }
+    td { vertical-align: top; }
+    .sidebar {
+      width: 220px;
+      background: #00ffea;
+      border-right: 8px dotted #ff00f2;
+      padding: 14px;
+    }
+    .content {
+      padding: 8px;
+      background: #ffffff;
+      background-image: linear-gradient(transparent 95%, rgba(255,0,0,0.2) 95%);
+      background-size: 100% 28px; /* fake notebook lines */
+      color: #111;
+    }
+    .navlink { display: block; padding: 6px; margin: 6px 0; background: #ffff00; border: 4px outset #ff00f2; text-decoration: underline overline; color: #0000ee; font-weight: bold; }
+    .hit-counter { font-family: "Times New Roman", serif; font-size: 12px; background: #000; color: #0f0; padding: 4px 8px; display: inline-block; border: 5px inset #0f0; }
+    .blinky { animation: blink 0.6s steps(2, start) infinite; color: red; text-shadow: 2px 2px 0 yellow; }
+    @keyframes blink { to { visibility: hidden; } }
+    .marquee-box { border: 6px groove #0000ff; background: #ffccff; padding: 4px; margin: 10px 0; }
+    .buttons img { image-rendering: pixelated; width: 88px; height: 31px; border: 2px solid #000; margin: 4px; }
+    .geocities { font-family: "Courier New", monospace; background: #111; color: #0f0; padding: 10px; border: 6px double #0f0; }
+    .guestbook { border: 8px ridge #f90; background: #fff8e1; padding: 10px; }
+    .footer { background: #222; color: #fff; padding: 8px; text-align: center; border-top: 10px dashed #ff00f2; }
+    .under-construction { font-size: 22px; color: #f00; text-transform: uppercase; letter-spacing: 2px; }
+    .rainbow-text { background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet); -webkit-background-clip: text; background-clip: text; color: transparent; text-shadow: 2px 2px 0 #000; }
+    .center { text-align: center; }
+  </style>
+</head>
+<body>
+  <!-- Top banner with <marquee> to scream 90s -->
+  <div class="marquee-box">
+    <marquee scrollamount="14" behavior="alternate"><span class="rainbow-text" style="font-size: 36px; font-weight: 900;">WELCOME TO MY AWESOME HOMEPAGE!!!</span> ✨ BEST VIEWED IN 800x600 ✨</marquee>
+  </div>
+
+  <table class="layout" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="sidebar">
+        <center>
+          <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='120'><rect width='160' height='120' fill='%23ffcc00'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='18' font-family='Comic Sans MS'>MY LOGO</text></svg>" alt="logo" />
+        </center>
+        <hr>
+        <a class="navlink" href="#">HOME</a>
+        <a class="navlink" href="#">MY DIARY</a>
+        <a class="navlink" href="#">FAN CLUB</a>
+        <a class="navlink" href="#">DOWNLOADS (FREE!)</a>
+        <a class="navlink" href="#">WALLPAPERS</a>
+        <a class="navlink" href="#">LINKS PAGE</a>
+        <div style="margin-top: 12px;" class="center">
+          <div class="hit-counter">VISITOR COUNTER: 000123</div>
+        </div>
+        <div class="buttons center">
+          <img alt="button1" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='88' height='31'><rect width='88' height='31' fill='%23000'/><text x='6' y='21' fill='%23fff' font-size='12'>BEST VIEWED</text></svg>">
+          <img alt="button2" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='88' height='31'><rect width='88' height='31' fill='%23000'/><text x='6' y='21' fill='%23fff' font-size='12'>IE4+ ONLY</text></svg>">
+          <img alt="button3" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='88' height='31'><rect width='88' height='31' fill='%23000'/><text x='6' y='21' fill='%23fff' font-size='12'>UNDER CONSTR.</text></svg>">
+        </div>
+      </td>
+
+      <td class="content">
+        <center>
+          <h1 class="blinky">WELCOME TO MY COOL SITE!!!</h1>
+          <p><font size="+2" color="#ff0000"><b>THIS PAGE IS ALWAYS UNDER CONSTRUCTION</b></font> 🛠️</p>
+        </center>
+
+        <div class="geocities">
+          <p><b>UPDATE LOG:</b></p>
+          <ul>
+            <li>07/04/2001 - Added COOL MIDI background music!!!</li>
+            <li>06/30/2001 - NEW guestbook, pls sign!!</li>
+            <li>06/15/2001 - Frames??? Coming soon!!</li>
+          </ul>
+        </div>
+
+        <div class="marquee-box">
+          <marquee direction="up" height="80" scrollamount="3">BUY MY STUFF!!! &nbsp; • &nbsp; SIGN MY GUESTBOOK!!! &nbsp; • &nbsp; JOIN MY NEWSLETTER!!! &nbsp; • &nbsp; SUBSCRIBE!!!</marquee>
+        </div>
+
+        <table border="5" cellpadding="10" cellspacing="10" width="100%" style="background:#ffffcc;">
+          <tr>
+            <td width="50%">
+              <h2><u>MY COOL HOBBIES</u></h2>
+              <ol>
+                <li>Making splash pages</li>
+                <li>Adding more GIFs</li>
+                <li>Collecting counters</li>
+              </ol>
+            </td>
+            <td>
+              <h2><u>NEWS FLASH</u></h2>
+              <p><blink>WEBSITE MOVED! NEW URL SOON!!</blink> (but not really)</p>
+            </td>
+          </tr>
+        </table>
+
+        <div class="guestbook">
+          <h3>SIGN MY GUESTBOOK!!!</h3>
+          <form onsubmit="alert('Thanks!! (the guestbook is broken)'); return false;">
+            <p>Name: <input type="text" style="border: 5px inset #999;"> &nbsp; E-mail: <input type="text" style="border: 5px inset #999;"></p>
+            <p>Your message:<br><textarea rows="4" cols="50" style="border: 5px inset #999;">type here...</textarea></p>
+            <button type="submit" style="padding:8px 20px; border: 6px outset #00f; background: #ff0;">SUBMIT!!!</button>
+          </form>
+        </div>
+
+        <p class="under-construction">🚧 UNDER CONSTRUCTION 🚧 CHECK BACK EVERY HOUR 🚧</p>
+      </td>
+    </tr>
+  </table>
+
+  <div class="footer">
+    <p>© 2001 My Cool Site • <a href="#" style="color:#0ff;">Sign Guestbook</a> • <a href="#" style="color:#0ff;">View Guestbook</a></p>
+  </div>
+
+  <!-- Fake autoplay nostalgia (likely blocked by browsers, but here for effect) -->
+  <audio autoplay loop>
+    <source src="data:audio/midi;base64,TVRoZAAAAAYAAQABAPBNVHJrAAAACgD/UQAHQwA=" type="audio/midi">
+  </audio>
+</body>
+</html>
